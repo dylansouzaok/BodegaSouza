@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bodega Souza</title>
+  <link rel="icon" type="image/png" href="logo_ico.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="menu-toggle" id="menu-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <div class="nav-overlay" id="nav-overlay">
+    <nav>
+      <a href="#home" class="nav-link">Inicio</a>
+      <a href="#historia" class="nav-link">La Bodega</a>
+      <a href="#vinos" class="nav-link">Nuestros Vinos</a>
+      <a href="#contacto" class="nav-link">Contacto</a>
+    </nav>
+  </div>
+
+  <header id="home">
+    <img src="logo_home.png" alt="Logo de Bodega Souza" class="header-logo">
+    <a href="#historia" class="scroll-down">&#8595;</a>
+  </header>
+
+  <section id="historia">
+    <div class="section-content">
+      <h2>Nuestra Historia</h2>
+      <p>Bodega Souza nació en 2016 como un proyecto familiar dedicado a rescatar la esencia del vino artesanal uruguayo. Desde sus inicios, la bodega ha combinado tradición y diseño para crear vinos que celebran el territorio, la identidad y la experiencia sensorial.</p>
+      <p>Cada botella refleja un proceso cuidado, donde la innovación se une con el respeto por las técnicas clásicas de vinificación. Nuestro compromiso es simple: elaborar vinos honestos, expresivos y pensados para disfrutar en cada momento de encuentro.</p> 
+    </div>
+    <a href="#vinos" class="scroll-down">&#8595;</a>
+  </section>
+
+  <section id="vinos">
+    <div class="section-content">
+      <h2>Nuestros Vinos</h2>
+      <p>Cada botella cuenta una historia. Aquí te presentamos tres de nuestras creaciones más emblemáticas, un reflejo de nuestra pasión y dedicación.</p>
+      <div class="wine-slider">
+        <button class="slider-arrow arrow-left" id="prev-wine">&#10094;</button>
+        <div class="wine-slider-viewport">
+          <div class="wine-track" id="wine-track">
+            <div class="wine-card">
+              <img src="malbec_granreserva.jpg" alt="Vino Malbec Reserva">
+              <h3>Versos Reserva</h3>
+              <p>Intenso y complejo, con notas de ciruela, violetas y un toque de roble. Ideal para acompañar carnes rojas y quesos curados.</p>
+            </div>
+            <div class="wine-card">
+              <img src="vino_blanco.jpg" alt="Vino Chardonnay">
+              <h3>Suspiros</h3>
+              <p>Fresco y vibrante, con aromas a manzana verde, ananá y una delicada mineralidad. Perfecto con pescados, mariscos y ensaladas.</p>
+            </div>
+            <div class="wine-card">
+              <img src="vino_tinto.jpg" alt="Vino Cabernet Sauvignon">
+              <h3>Brisas Sauvignon</h3>
+              <p>Elegante y estructurado, este vino ofrece notas de pimiento rojo, cassis y especias. Un gran compañero para pastas con salsas intensas.</p>
+            </div>
+          </div>
+        </div>
+        <button class="slider-arrow arrow-right" id="next-wine">&#10095;</button>
+      </div>
+    </div>
+    <a href="#contacto" class="scroll-down">&#8595;</a>
+  </section>
+
+  <section id="contacto">
+    <div class="section-content">
+      <h2>Contacto</h2>
+      <p>¿Querés realizar una consulta, organizar una visita o saber más sobre nuestros vinos? Escribinos y te responderemos a la brevedad</p>
+      <form action="#" method="POST" class="contact-form">
+        <div class="form-group">
+          <input type="text" name="name" class="form-input" placeholder="Nombre" required>
+        </div>
+        <div class="form-group">
+          <input type="email" name="email" class="form-input" placeholder="Email" required>
+        </div>
+        <div class="form-group">
+          <textarea name="message" class="form-input" placeholder="Tu mensaje" required></textarea>
+        </div>
+        <button type="submit" class="btn">Enviar Mensaje</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <p class="contact-info">Ubicación: Camino a Sierras de las Ánimas 72, Maldonado, Uruguay <span class="separator">|</span> Teléfono: +598 91 234 567 <span class="separator">|</span> Email: <a href="mailto:contacto@bodegaelencanto.com">contacto@bodegaelencanto.com</a></p>
+      <div class="social-icons">
+        <a href="https://instagram.com" target="_blank" aria-label="Instagram de Bodega Souza">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+          <span>@Bodega Souza</span>
+        </a>
+        <a href="https://facebook.com" target="_blank" aria-label="Facebook de Bodega Souza">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+          <span>Bodega Souza</span>
+        </a>
+      </div>
+      <p class="disclaimer">BEBER CON MODERACIÓN. PROHIBIDA LA VENTA A MENORES DE 18 AÑOS.</p>
+      <p class="copyright">&copy; 2016 - 2025 Bodega Souza — Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="scripts.js" defer></script>
+</body>
+</html>
