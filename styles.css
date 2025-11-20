@@ -38,7 +38,7 @@ a {
 header {
   position: relative;
   height: 100vh;
-  background: url('viñedo.jpg') center/cover no-repeat;
+  background: url('viniedo.jpg') center/cover no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -211,7 +211,7 @@ section p {
 }
 
 /* Fondos de sección */
-#historia { background-image: url('viñedo.jpg'); }
+#historia { background-image: url('viniedo.jpg'); }
 #vinos { background-image: url('bodega_interior.jpg'); }
 #contacto { background-image: url('malbec_granreserva.jpg'); }
 
