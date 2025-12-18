@@ -222,19 +222,10 @@ section p {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
-  margin-top: 50px;
+  margin: 50px auto 0;
   max-width: 1100px;
-  margin: 50px auto 0; /* centra horizontalmente */
+  justify-items: center; /* centra las tarjetas dentro del grid */
 }
-
-.wine-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
-
-  margin: auto 0; /* ← CLAVE */
-}
-
 
 .wine-card {
   background-color: rgba(0,0,0,0.4);
@@ -252,8 +243,9 @@ section p {
 .wine-card img {
   height: 280px;
   width: auto;
-  margin-bottom: 25px;
+  margin: 0 auto 25px auto; /* centra la imagen */
   object-fit: contain;
+  display: block; /* necesario para que el margin auto funcione */
 }
 
 .wine-card h3 {
@@ -271,9 +263,9 @@ section p {
   align-items: center; /* centra verticalmente */
 }
 
-
 #vinos .section-content {
   width: 100%;
+  max-width: 1200px; /* permite que el wine-grid de 1100px esté centrado */
 }
 
 /* ------- Formulario de Contacto ------- */
