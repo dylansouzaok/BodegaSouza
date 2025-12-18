@@ -11,7 +11,7 @@ html {
 
 /* ------- Base ------- */
 body {
-  font-family: 'Georgia', serif;
+  font-family: 'Arial', sans-serif;
   background-color: #1a1a1a; /* Fondo oscuro base */
   color: #ffffff;
   overflow-x: hidden;
@@ -38,7 +38,7 @@ a {
 header {
   position: relative;
   height: 100vh;
-  background: url('viniedo.jpg') center/cover no-repeat;
+  background: url('Viñedo_Fondo.jpg') center/cover no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -52,16 +52,17 @@ header::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.55);
+  background: rgba(0, 0, 0, 0.2);
 }
 
 .header-logo {
   position: relative;
-  max-width: 550px;
+  max-width: 400px;
   width: 75vw;
   height: auto;
+  margin-bottom: 270px;
   /* Sombra sutil para que el logo resalte sobre el fondo */
-  filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.5));
+  filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.2));
 }
 
 .scroll-down {
@@ -104,7 +105,7 @@ header::before {
   display: block;
   width: 100%;
   height: 3px;
-  background-color: white;
+  background-color: rgb(0, 0, 0);
   border-radius: 3px;
   transition: all 0.3s ease-in-out;
 }
@@ -125,7 +126,7 @@ header::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(26, 26, 26, 0.98);
+  background-color: lab(7.27% 21.86 7.25 / 0.918);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -157,14 +158,15 @@ header::before {
 
 /* ------- Secciones ------- */
 section {
-  min-height: 90vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 100px 40px;
   position: relative;
   background-size: cover;
-  background-position: center;
+  background-position: center center;
+  background-repeat: no-repeat;
   background-attachment: fixed; /* Efecto Parallax */
 }
 
@@ -211,93 +213,67 @@ section p {
 }
 
 /* Fondos de sección */
-#historia { background-image: url('viniedo.jpg'); }
-#vinos { background-image: url('bodega_interior.jpg'); }
-#contacto { background-image: url('bodega_botellas.jpg'); }
+#historia { background-image: url('cava_dylan.png'); }
+#vinos { background-image: url('Cava.jpg'); }
+#contacto { background-image: url('Viñedo_Poste.jpg'); }
 
-/* Sección Vinos Específica - Carrusel */
-.wine-slider {
-  position: relative;
-  width: 100%;
-  max-width: 350px; /* Ancho de una tarjeta + padding */
-  margin: 40px auto 0;
+/* ------- Vinos en horizontal ------- */
+.wine-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-top: 50px;
+  max-width: 1100px;
+  margin: 50px auto 0; /* centra horizontalmente */
 }
 
-.wine-slider-viewport {
-  overflow: hidden;
+.wine-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+
+  margin: auto 0; /* ← CLAVE */
 }
 
-.wine-track {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-}
 
 .wine-card {
-  flex: 0 0 100%;
   background-color: rgba(0,0,0,0.4);
   border: 1px solid #444;
-  padding: 25px;
+  padding: 30px 25px;
   border-radius: 5px;
   text-align: center;
-  box-sizing: border-box;
+  transition: transform 0.3s ease;
 }
 
-.slider-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(216, 198, 161, 0.8);
-  color: #1a1a1a;
-  border: none;
-  cursor: pointer;
-  font-size: 1.5rem;
-  font-weight: bold;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 10;
-  transition: background-color 0.3s ease;
-}
-
-.slider-arrow:hover {
-  background-color: #d8c6a1;
-}
-
-.slider-arrow:disabled {
-  background-color: rgba(100, 100, 100, 0.5);
-  cursor: not-allowed;
-}
-
-.arrow-left {
-  left: -50px;
-}
-
-.arrow-right {
-  right: -50px;
+.wine-card:hover {
+  transform: translateY(-8px);
 }
 
 .wine-card img {
-  height: 250px;
+  height: 280px;
   width: auto;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   object-fit: contain;
-  -webkit-user-drag: none; /* Evita arrastrar la imagen */
-  user-select: none;
 }
 
 .wine-card h3 {
   color: #d8c6a1;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   font-size: 1.4rem;
-  min-height: 40px; /* Para alinear títulos de diferente longitud */
 }
 
 .wine-card p {
   font-size: 0.95rem;
-  margin-bottom: 0;
+}
+
+#vinos {
+  display: flex;
+  align-items: center; /* centra verticalmente */
+}
+
+
+#vinos .section-content {
+  width: 100%;
 }
 
 /* ------- Formulario de Contacto ------- */
